@@ -25,6 +25,31 @@ services:
       ZITADEL_DATABASE_POSTGRES_USER_PASSWORD: zitadel
       ZITADEL_DATABASE_POSTGRES_USER_SSL_MODE: disable
       
+      # ===== SOCIAL LOGIN PROVIDERS (PRODUCTION SETUP) =====
+      # Configure these with your actual provider credentials
+      
+      # Google OAuth2
+      # Get these from: https://console.cloud.google.com/apis/credentials
+      ZITADEL_FIRSTINSTANCE_IDP_GOOGLE_CLIENT_ID: "YOUR_GOOGLE_CLIENT_ID"
+      ZITADEL_FIRSTINSTANCE_IDP_GOOGLE_CLIENT_SECRET: "YOUR_GOOGLE_CLIENT_SECRET"
+      
+      # GitHub OAuth App  
+      # Get these from: https://github.com/settings/developers
+      ZITADEL_FIRSTINSTANCE_IDP_GITHUB_CLIENT_ID: "YOUR_GITHUB_CLIENT_ID"
+      ZITADEL_FIRSTINSTANCE_IDP_GITHUB_CLIENT_SECRET: "YOUR_GITHUB_CLIENT_SECRET"
+      
+      # Microsoft (Azure AD)
+      # Get these from: https://portal.azure.com/#view/Microsoft_AAD_RegisteredApps
+      ZITADEL_FIRSTINSTANCE_IDP_MICROSOFT_CLIENT_ID: "YOUR_MICROSOFT_CLIENT_ID"
+      ZITADEL_FIRSTINSTANCE_IDP_MICROSOFT_CLIENT_SECRET: "YOUR_MICROSOFT_CLIENT_SECRET"
+      
+      # Facebook (Optional)
+      # Get these from: https://developers.facebook.com/
+      ZITADEL_FIRSTINSTANCE_IDP_FACEBOOK_CLIENT_ID: "YOUR_FACEBOOK_CLIENT_ID"
+      ZITADEL_FIRSTINSTANCE_IDP_FACEBOOK_CLIENT_SECRET: "YOUR_FACEBOOK_CLIENT_SECRET"
+      
+      # ===== ADDITIONAL FIRST INSTANCE SETUP =====
+      
       # By configuring a login client, the setup job creates a user of type machine with the role IAM_LOGIN_CLIENT.
       # It writes a PAT to the path specified in ZITADEL_FIRSTINSTANCE_LOGINCLIENTPATPATH.
       # The PAT is passed to the login container via the environment variable ZITADEL_SERVICE_USER_TOKEN_FILE.
