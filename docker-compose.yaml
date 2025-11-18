@@ -106,7 +106,7 @@ services:
     volumes:
       - .:/current-dir:delegated
     ports:
-      - 8080:8080
+      - 7000:7000
       - 3000:3000
     networks:
       - zitadel
@@ -119,7 +119,7 @@ services:
     image: ghcr.io/zitadel/zitadel-login:latest
     # If you can't use the network_mode service:zitadel, you can pass the environment variables ZITADEL_API_URL=http://zitadel:8080 and CUSTOM_REQUEST_HEADERS=Host:localhost instead.
     environment:
-      - ZITADEL_API_URL=http://localhost:8080
+      - ZITADEL_API_URL=http://localhost:7000
       - NEXT_PUBLIC_BASE_PATH=/ui/v2/login
       - ZITADEL_SERVICE_USER_TOKEN_FILE=/current-dir/login-client.pat
     network_mode: service:zitadel
