@@ -103,3 +103,11 @@ CLAUDE.md
 AGENTS.md
 .mcp.json
 .gemini/*
+
+# Auto-committer ignored files
+*.tmp
+*.temp
+*.log
+*.cache
+*.env
+*.kilocode
