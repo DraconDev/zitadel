@@ -6,8 +6,10 @@ services:
     environment:
       # See "What's next" to learn about how to serve Zitadel on a different domain or IP.
       ZITADEL_EXTERNALDOMAIN: localhost
-
-      # See "What's next" to learn about how to enable TLS.
+            ZITADEL_PORT: 7000
+            ZITADEL_EXTERNALPORT: 7000
+      
+            # See "What's next" to learn about how to enable TLS.
       ZITADEL_EXTERNALSECURE: false
       ZITADEL_TLS_ENABLED: false
 
